@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--suppress ALL-->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>商品编号</td>
+        <td>商品名字</td>
+        <td>商品价格</td>
+        <td>商品库存</td>
+        <td>商品描述</td>
+    </tr>
+    <tr th:each="c:${list}">
+        <td th:text="${c.g_id}"></td>
+        <td th:text="${c.g_name}"></td>
+        <td th:text="${c.g_price}"></td>
+        <td th:text="${c.g_stock}"></td>
+        <td th:text="${c.g_desc}"></td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+<!--    &lt;!&ndash;给数据库取别名，方便通过别名使用数据类型&ndash;&gt;-->
+<!--    <typeAliases>-->
+<!--        &lt;!&ndash;给数com.ck.entity.goods取别名，对应核心配置文件中的parameterType&ndash;&gt;-->
+<!--        <typeAlias type="com.ck.entity.goods" alias="g"/>-->
+<!--        <typeAlias type="java.util.HashMap" alias="hashMap"/>-->
+<!--    </typeAliases>-->
+	<!--配置连接数据库的相关变量-->
+    <environments default="mysql">
+        <!--配置mysql数据库环境-->
+        <environment id="mysql">
+            <!--配置事务管理器-->
+            <transactionManager type="JDBC"/>
+            <!--dataSource 指定数据源，就是连接数据库的信息-->
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/t15"/>
+                <property name="username" value="root"/>
+                <property name="password" value=""/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <mapper resource="mappers/GoodsMapper.xml"/>
+    </mappers>
+</configuration>
