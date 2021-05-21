@@ -38,6 +38,7 @@ public class GoodsController {
     @ResponseBody
     public List<Good5> queryAll(){
         System.out.println(1);
+        System.out.println("喂喂喂");
         return goodService.queryAll();
     }
 
