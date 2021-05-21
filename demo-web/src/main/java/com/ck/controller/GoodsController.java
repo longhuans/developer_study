@@ -37,6 +37,7 @@ public class GoodsController {
     @RequestMapping("queryAllGood")
     @ResponseBody
     public List<Good5> queryAll(){
+        System.out.println(1);
         return goodService.queryAll();
     }
 
