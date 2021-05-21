@@ -24,6 +24,7 @@ public class GoodsController {
     //@RequestMapping(value="queryAllGoods2",method="get") 等价于下一个getMapping注解
     @GetMapping("queryAllGoods2")
     public  String queryAllgoods(ModelMap map){
+        System.out.println("我是龙欢呀呀呀");
         List<Goods> s = goodsService.queryAll();
         map.put("list", s);
         return "query";
